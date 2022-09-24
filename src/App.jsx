@@ -41,12 +41,12 @@ function App() {
           <Route path="/data/:userId" element = {<Details />} />
           {/* <Route path="/data/2" element = {<Details />} />
           <Route path="/data/3" element = {<Details />} /> */}  
-          <Route path="/user/:id" element = {<User />}/>
+          <Route path="/user/:name" element = {<User />}/>
         </Routes>
         {
           users.map((items) =>
           <div>
-            <Link to={"/user/" + items.id}>{items.name}</Link>
+            <Link to={"/user/" + items.name}>{items.name}</Link>
           </div>)
         }
       </Router>

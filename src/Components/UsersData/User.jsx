@@ -1,12 +1,16 @@
-import {withRouter} from 'react-router-dom'
+import { useParams } from "react-router-dom";
 
-function User(prop) {
-    console.warn(prop);
+// import {withRouter} from 'react-router-dom'
+
+function User() {
+    const params = useParams();
+    const {name} = params
+    console.warn(name);
     return (
     <div>
-        These is User Data Section
+        These is {name} Section
     </div>
   )
 }
 
-export default withRouter(User);
+export default User;
